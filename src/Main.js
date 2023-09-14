@@ -20,9 +20,9 @@ function Main({value}) {
   }
 
   return (
-    <div>
+    <main>
       {ViewChange(value)}
-    </div>
+    </main>
   );
 }
 
