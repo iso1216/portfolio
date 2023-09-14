@@ -1,28 +1,139 @@
 import * as React from 'react';
-import { Box, Tab, Tabs } from '@mui/material';
+import { AppBar, Box, Toolbar, Container, Button, Menu, MenuItem, Typography } from '@mui/material';
+import CatchingPokemonRoundedIcon from '@mui/icons-material/CatchingPokemonRounded';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import { IconButton } from '@mui/material';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import MenuIcon from '@mui/icons-material/Menu';
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+const pages = ['HOME', 'PROFILE', 'PRODUCTS', 'HISTORY'];
+
+function Header({setValue}) {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
   };
-}
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
-export default function Header({ value, setValue }) {
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const handleClick = (i) => {
+    setValue(i)
   };
 
   return (
-    <Box>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider', mt: 1 }}>
-        <Tabs value={value} onChange={handleChange} aria-label="hometab" >
-          <Tab label="ホーム" {...a11yProps(0)} sx={{fontSize: 12}} />
-          <Tab label="プロフィール" {...a11yProps(1)} sx={{fontSize: 12}} />
-          <Tab label="製作物" {...a11yProps(2)} sx={{fontSize: 12}} />
-          <Tab label="経歴" {...a11yProps(3)} sx={{fontSize: 12}} />
-        </Tabs>
-      </Box>
-    </Box>
+    <AppBar position="static" color='transparent'>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <CatchingPokemonRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            PORTFOLIO
+          </Typography>
+
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
+              {pages.map((page, i) => (
+                <MenuItem key={page} onClick={ () => handleClick(i) }>
+                  <Typography textAlign="center">{page}</Typography>
+                </MenuItem>
+              ))}
+              <IconButton href='https://twitter.com/isotis_1216' target='_blank'>
+                <TwitterIcon /><label><small>Twitter</small></label>
+              </IconButton><br/>
+              <IconButton href='https://www.instagram.com/taishi_isolation/' target='_blank'>
+                <InstagramIcon /><label><small>Instagram</small></label>
+              </IconButton><br/>
+              <IconButton href='https://github.com/iso1216' target='_blank'>
+                <GitHubIcon /><label><small>GitHub</small></label>
+              </IconButton>
+            </Menu>
+          </Box>
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontWeight: 700,
+              fontFamily: 'monospace',
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            PORTFOLIO
+          </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {pages.map((page, i) => (
+              <Button
+                key={page}
+                onClick={ () => handleClick(i) }
+                sx={{ my: 2, color: 'black', display: 'block' }}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <IconButton href='https://twitter.com/isotis_1216' target='_blank'>
+            <TwitterIcon />
+          </IconButton>
+          <IconButton href='https://www.instagram.com/taishi_isolation/' target='_blank'>
+            <InstagramIcon />
+          </IconButton>
+          <IconButton href='https://github.com/iso1216' target='_blank'>
+            <GitHubIcon />
+          </IconButton>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }
+export default Header;
