@@ -8,8 +8,8 @@ import { Container } from '@mui/material';
 function App() {
   const [value, setValue] = React.useState(0);
   return (
-    <Container sx={{ width: '80%' }}>
-      <Header value={value} setValue={setValue} />
+    <Container>
+      <Header setValue={setValue} />
       <Main value={value} />
       <Footer />
     </Container>
