@@ -20,7 +20,8 @@ function Header({setValue}) {
   };
 
   const handleClick = (i) => {
-    setValue(i)
+    setAnchorElNav(null);
+    setValue(i);
   };
 
   return (
