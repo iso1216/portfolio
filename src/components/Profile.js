@@ -11,7 +11,7 @@ export default function Profile(){
           <Box sx={{display: 'flex' , justifyContent: 'center'}}>
             <img src="#/img/myImage.jpg" alt="自画像" className="myImage" />
           </Box>
-          {useMediaQuery("(min-width:700px)") ? <label>志摩スペイン村での写真</label>:""}
+          {useMediaQuery("(min-width:700px)") ? <label><small>志摩スペイン村での写真</small></label>:""}
         </Box>
         <Box fontFamily={"initial"} sx={{"@media screen and (min-width:700px)": {width: '55%'}}}>
           <Box sx={{display: 'flex', alignItems: "end", "@media screen and (min-width:700px)": {justifyContent: 'center'}}}>
