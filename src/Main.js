@@ -1,7 +1,7 @@
 import Home from './components/Home';
 import Profile from './components/Profile';
 import History from './components/History';
-import Creation from './components/Creation';
+import Products from './components/Products';
 
 function Main({value}) {
   const ViewChange = (value) => {
@@ -11,7 +11,7 @@ function Main({value}) {
       case 1:
         return <Profile />;
       case 2:
-        return <Creation />;
+        return <Products />;
       case 3:
         return <History />;
       default:
