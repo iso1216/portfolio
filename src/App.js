@@ -12,7 +12,7 @@ function App() {
       position: 'absolute',
       width: '100vw',
       height: '100vh',
-      backgroundImage: `url(/img/home.jpg)`,
+      backgroundImage: `url(/img/#)`,
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'}}>
