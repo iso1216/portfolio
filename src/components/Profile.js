@@ -11,7 +11,7 @@ export default function Profile(){
           <Box sx={{display: 'flex' , justifyContent: 'center'}}>
             <img src="#/img/myImage.jpg" alt="自画像" className="myImage" />
           </Box>
-          {useMediaQuery("(min-width:700px)") ? <label><small>志摩スペイン村での写真</small></label>:""}
+          {useMediaQuery("(min-width:700px)") ? <label><small>※志摩スペイン村での写真</small></label>:""}
         </Box>
         <Box fontFamily={"initial"} sx={{"@media screen and (min-width:700px)": {width: '55%'}}}>
           <Box sx={{display: 'flex', alignItems: "end", "@media screen and (min-width:700px)": {justifyContent: 'center'}}}>
@@ -23,9 +23,13 @@ export default function Profile(){
           <h3>血液型&emsp;&emsp;&emsp;：A型</h3>
           <h3>趣味・日課&emsp;：パワプロ、ポケモンスリープ</h3>
           <h3>Mail&emsp;&emsp;&emsp;&emsp;：taishi2002i@gmail.com</h3>
-          <p></p>
         </Box>
       </Box>
+      <Container sx={{"@media screen and (min-width:700px)": {width: '85%'}}}>
+        <Box >
+          <p>&emsp;専門学校に通い資格取得に向けた勉強を行いながら、簡単な個人開発を行っています。ゲームが好きでパワプロやポケモンをよくプレイします。また、最近ポケモンスリープにはまっており、毎日決まった時間に寝る習慣を付けることに役立っています。</p>
+        </Box>
+      </Container>
       <ImageList sx={{display: 'flex'}} >
       {itemData.map((item) => (
         <ImageListItem key={item.img} sx={{width: 100/itemData.length+'%'}}>
