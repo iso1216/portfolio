@@ -1,6 +1,7 @@
-import { ImageList, ImageListItem, useMediaQuery } from "@mui/material";
+import { ImageList, ImageListItem, Table, TableBody, TableCell, TableContainer, TableRow, Typography, useMediaQuery } from "@mui/material";
 import { Box, Container } from "@mui/system";
-import { itemData } from "./itemData";
+import { itemData } from "../Data/itemData";
+import { SkilData } from "../Data/SkilData";
 
 export default function Profile(){
   return(
@@ -26,10 +27,22 @@ export default function Profile(){
         </Box>
       </Box>
       <Container sx={{"@media screen and (min-width:700px)": {width: '85%'}}}>
-        <Box >
-          <p>&emsp;専門学校に通い資格取得に向けた勉強を行いながら、簡単な個人開発を行っています。ゲームが好きでパワプロやポケモンをよくプレイします。また、最近ポケモンスリープにはまっており、毎日決まった時間に寝る習慣を付けることに役立っています。</p>
-        </Box>
+        <Typography fontSize={{"xs": 12,"sm": 15}} marginY={2}>&emsp;専門学校に通いプログラミングや資格取得に向けた勉強を行いながら、空いた時間を使って簡単な個人開発を行っています。ゲームが好きでパワプロやポケモンをよくプレイします。また、最近ポケモンスリープにはまっており、毎日の睡眠の糧になっています。</Typography>
       </Container>
+      <Typography variant="h5" sx={{display: {"xs": "none", "sm": "flex"}}}>プログラミングスキル</Typography>
+      <Typography variant="h6" sx={{display: {"xs": "flex", "sm": "none"}}}>プログラミングスキル</Typography>
+      <TableContainer sx={{display: 'flex', justifyContent: 'center'}}>
+        <Table sx={{ width: '80%' }} size="small" >
+          <TableBody>
+            {SkilData.map((item) => (
+              <TableRow>
+                <TableCell>{item.skil}</TableCell>
+                <TableCell>{item.since}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
       <ImageList sx={{display: 'flex'}} >
       {itemData.map((item) => (
         <ImageListItem key={item.img} sx={{width: 100/itemData.length+'%'}}>
