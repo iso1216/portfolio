@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material';
 import * as React from 'react';
-import { HistData } from './HistData';
+import { HistData } from '../Data/HistData';
 
 export default function History() {
   return (
