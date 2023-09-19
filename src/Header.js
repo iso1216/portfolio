@@ -25,7 +25,7 @@ function Header({setValue}) {
   };
 
   return (
-    <AppBar position="static" color='transparent'>
+    <AppBar position="static" color='inherit'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <CatchingPokemonRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
