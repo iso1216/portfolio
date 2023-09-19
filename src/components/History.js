@@ -1,58 +1,20 @@
-import { Box, Button, Container, Paper, Step, StepContent, StepLabel, Stepper, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import * as React from 'react';
-
-const steps = [
-  {
-    label: 'Select campaign settings',
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
-  },
-  {
-    label: 'Create an ad group',
-    description:
-      'An ad group contains one or more ads which target a shared set of keywords.',
-  },
-  {
-    label: 'Create an ad',
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
-  },
-];
+import { HistData } from './HistData';
 
 export default function History() {
-  const [activeStep, setActiveStep] = React.useState(0);
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleReset = () => {
-    setActiveStep(0);
-  };
-
   return (
     <Container maxWidth='lg'>
       <h1>経歴</h1>
-      <Box sx={{ maxWidth: 400 }}>
-        <Stepper activeStep={activeStep} orientation="vertical">
-          {steps.map((step, index) => (
-            <Step key={step.label}>
-              <StepLabel>
-                {step.label}
-              </StepLabel>
-              <StepContent>
-                <Typography>{step.description}</Typography>
-              </StepContent>
-            </Step>
+      <Box sx={{display: 'flex', justifyContent: 'center'}}>
+        <Box sx={{width: '80%'}}>
+          {HistData.map((history) => (
+            <Box sx={{display: 'flex', my: 3}}>
+            <Typography fontSize={20} marginRight={2}>{history.Date}</Typography>
+            <Typography fontSize={20}>{history.name}</Typography>
+            </Box>
           ))}
-        </Stepper>
+        </Box>
       </Box>
     </Container>
   );
