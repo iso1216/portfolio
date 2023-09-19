@@ -9,9 +9,11 @@ export default function History() {
       <Box sx={{display: 'flex', justifyContent: 'center'}}>
         <Box sx={{width: '80%'}}>
           {HistData.map((history) => (
-            <Box sx={{display: 'flex', my: 3}}>
-            <Typography fontSize={20} marginRight={2}>{history.Date}</Typography>
-            <Typography fontSize={20}>{history.name}</Typography>
+            <Box sx={{"@media screen and (min-width:700px)": {my: 3}}}>
+            <Box sx={{"@media screen and (min-width:700px)": {display: 'flex'}}}>
+            <Typography sx={{"@media screen and (min-width:400px)": { fontSize: 20 }}} marginRight={2}>{history.Date}</Typography>
+            <Typography fontSize={{"xs": '', "sm": 20}}>{history.name}</Typography></Box>
+            {history.detail ? <Typography fontSize={{"xs": 10, "sm": 15}} marginLeft={5}>*{history.detail}</Typography> : ''}
             </Box>
           ))}
         </Box>
