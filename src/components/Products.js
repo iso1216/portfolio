@@ -1,5 +1,9 @@
+import { Container } from "@mui/material";
+
 export default function Products(){
   return(
-    <p>2</p>
+    <Container maxWidth='lg'>
+      <h1>製作物</h1>
+    </Container>
   );
 }
