@@ -2,15 +2,45 @@ import { ImageList, ImageListItem, Table, TableBody, TableCell, TableContainer, 
 import { Box, Container } from "@mui/system";
 import { itemData } from "../Data/itemData";
 import { SkilData } from "../Data/SkilData";
+import { useEffect, useState } from "react";
 
 export default function Profile(){
+  const [keyHistoryList, setKeyHistoryList] = useState([]);
+  const [rotateImage, setRotateImage] = useState(false);
+
+  useEffect(() => {
+    // キー入力履歴を10個まで保存する
+    const handleKeyDown = (event) => {
+      const { key } = event;
+      setKeyHistoryList((prev) => [...prev, key].slice(-10));
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+  // キー入力履歴を監視して、コマンドを入力したらロゴを回転させる
+  useEffect(() => {
+    const code = "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba";
+    if (keyHistoryList.join("") === code) {
+      const logo = document.querySelector(".image-rotate");
+      if (logo) {
+        if (rotateImage)logo.children[0].classList.remove("rotate");
+        else logo.children[0].classList.add("rotate");
+        setRotateImage(!rotateImage);
+      }
+    }
+  }, [keyHistoryList]);
+  
+
   return(
     <Container maxWidth='lg'>
       <h1>プロフィール</h1>
       <Box sx={{"@media screen and (min-width:700px)": {display: 'flex'}}}>
-        <Box sx={{"@media screen and (min-width:700px)": {width: '45%'}, "@media screen and (max-width:699px)": {width: '20%', display: 'flex'}}}>
-          <Box sx={{display: 'flex' , justifyContent: 'center'}}>
-            <img src="#/img/myImage.jpg" alt="自画像" className="myImage" />
+        <Box sx={{"@media screen and (min-width:700px)": {width: '45%'}, "@media screen and (max-width:400px)": {width: '72px', display: 'flex'}, "@media screen and (max-width:699px) and (min-width:401px)": {width: '200px', display: 'flex'}}}>
+          <Box sx={{display: 'flex' , justifyContent: 'center'}} className="image-rotate">
+            <img src="#/img/myImage.jpg" alt="自画像(コナミコマンド対応)" className="myImage" />
           </Box>
           {useMediaQuery("(min-width:700px)") ? <label><small>※志摩スペイン村での写真</small></label>:""}
         </Box>
@@ -27,17 +57,17 @@ export default function Profile(){
         </Box>
       </Box>
       <Container sx={{"@media screen and (min-width:700px)": {width: '85%'}}}>
-        <Typography fontSize={{"xs": 12,"sm": 15}} marginY={2}>&emsp;専門学校に通いプログラミングや資格取得に向けた勉強を行いながら、空いた時間を使って簡単な個人開発を行っています。ゲームが好きでパワプロやポケモンをよくプレイします。また、最近ポケモンスリープにはまっており、毎日の睡眠の糧になっています。</Typography>
+        <Typography fontSize={{"xs": 12,"sm": 15}} marginY={2}>&emsp;専門学校に通いプログラミングやマネジメント、資格取得に向けた勉強を行いながら、空いた時間を使ってReactやLaravelを利用し簡単な個人開発を行っています。ゲームが好きでパワプロやポケモンをよくプレイします。また、最近ポケモンスリープにはまっており、夜更かしをすることが減りました。</Typography>
       </Container>
-      <Typography variant="h5" sx={{display: {"xs": "none", "sm": "flex"}}}>プログラミングスキル</Typography>
+      <Typography variant="h5" sx={{display: {"xs": "none", "sm": "flex"}}} marginLeft={2}>プログラミングスキル</Typography>
       <Typography variant="h6" sx={{display: {"xs": "flex", "sm": "none"}}}>プログラミングスキル</Typography>
       <TableContainer sx={{display: 'flex', justifyContent: 'center'}}>
         <Table sx={{ width: '80%' }} size="small" >
           <TableBody>
-            {SkilData.map((item) => (
-              <TableRow>
+            {SkilData.map((item, index) => (
+              <TableRow key={index}>
                 <TableCell>{item.skil}</TableCell>
-                <TableCell>{item.since}</TableCell>
+                <TableCell align="right">{item.since}</TableCell>
               </TableRow>
             ))}
           </TableBody>
