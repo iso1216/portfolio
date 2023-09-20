@@ -39,6 +39,9 @@
 .imgList{
   border-radius: 100%;
 }
+.productImage{
+  width: 100%;
+}
 .name{
   padding-left: 10px;
   padding-bottom: 5px;

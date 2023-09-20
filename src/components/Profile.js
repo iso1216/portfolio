@@ -31,7 +31,7 @@ export default function Profile(){
         setRotateImage(!rotateImage);
       }
     }
-  }, [keyHistoryList]);
+  }, [keyHistoryList, rotateImage]);
   
 
   return(
