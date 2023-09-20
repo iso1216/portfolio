@@ -22,5 +22,6 @@ export const productsData = [
     name: '会計管理アプリ',
     detail: '学園祭用に作成した売上や支出を記録することができる会計管理アプリ',
     url: 'https://github.com/iso1216/cash-coordinater',
+    img: '/img/cash.png',
   },
 ]
