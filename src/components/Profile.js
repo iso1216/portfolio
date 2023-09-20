@@ -31,7 +31,7 @@ export default function Profile(){
         setRotateImage(!rotateImage);
       }
     }
-  }, [keyHistoryList, rotateImage]);
+  }, [keyHistoryList]);
   
 
   return(
@@ -73,7 +73,7 @@ export default function Profile(){
           </TableBody>
         </Table>
       </TableContainer>
-      <ImageList sx={{display: 'flex'}} >
+      <ImageList sx={{display: 'flex', marginTop: 5}} >
       {itemData.map((item) => (
         <ImageListItem key={item.img} sx={{width: 100/itemData.length+'%'}}>
           <img
