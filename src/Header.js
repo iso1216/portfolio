@@ -7,7 +7,7 @@ import { IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import MenuIcon from '@mui/icons-material/Menu';
 
-const pages = ['HOME', 'PROFILE', 'PRODUCTS', 'HISTORY'];
+const pages = ['PROFILE', 'PRODUCTS', 'HISTORY'];
 
 function Header({setValue}) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -21,7 +21,7 @@ function Header({setValue}) {
 
   const handleClick = (i) => {
     setAnchorElNav(null);
-    setValue(i);
+    setValue(i+1);
   };
 
   return (
