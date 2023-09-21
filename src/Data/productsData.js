@@ -16,7 +16,7 @@ export const productsData = [
     img: '/img/mine-sweeper.png',
   },
   {
-    name: 'Relicインターン製作物',
+    name: 'Relicインターン',
     explanation: '名古屋市内の交通事故情報についてを投稿することができる掲示板アプリ',
     detail: 'Laravelを使用して作成\nチームで話し合い企画立案から設計、開発までを行った。',
     url: 'https://github.com/iso1216/internship-relic',

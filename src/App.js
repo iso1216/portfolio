@@ -11,7 +11,7 @@ function App() {
     <Box>
       <Header setValue={setValue} />
       <Main value={value} />
-      <Footer />
+      <Footer setValue={setValue} />
     </Box>
   );
 }
