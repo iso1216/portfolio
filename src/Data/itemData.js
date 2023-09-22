@@ -1,26 +1,26 @@
 export const itemData = [
   {
-    img: '/portfolio/img/pokemon.jpg',
+    img: 'https://github.com/iso1216/portfolio/blob/main/public/img/pokemon.jpg',
     title: 'pokemonSleep',
   },
   {
-    img: '/portfolio/img/sutaba.jpg',
+    img: 'https://github.com/iso1216/portfolio/blob/main/public/img/sutaba.jpg',
     title: 'sutaba',
   },
   {
-    img: '/portfolio/img/noodle.jpg',
+    img: 'https://github.com/iso1216/portfolio/blob/main/public/img/noodle.jpg',
     title: 'kanayamaya',
   },
   {
-    img: '/portfolio/img/karaoke.jpg',
+    img: 'https://github.com/iso1216/portfolio/blob/main/public/img/karaoke.jpg',
     title: 'karaoke',
   },
   {
-    img: '/portfolio/img/huro.jpg',
+    img: 'https://github.com/iso1216/portfolio/blob/main/public/img/huro.jpg',
     title: 'huro',
   },
   {
-    img: '/portfolio/img/riza.jpg',
+    img: 'https://github.com/iso1216/portfolio/blob/main/public/img/riza.jpg',
     title: 'riza-don',
   },
 ];
