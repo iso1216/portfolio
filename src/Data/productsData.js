@@ -10,7 +10,7 @@ export const productsData = [
   {
     name: 'マインスイーパー',
     explanation: '複数難易度でキー入力でもプレイ可能なマインスイーパー',
-    detail: 'Reactを使用して作成\nReactのtutorialのシステムを改編し暇つぶしにちょうどいいゲームを作ってみようと思い作成し、知り合いからどういった機能が欲しいっかなどを聞き込みし、それに合わせた機能を実装している。',
+    detail: 'Reactを使用して作成\nReactのtutorialのシステムを改編し暇つぶしにちょうどいいゲームを作ってみようと思い作成し、知り合いからどういった機能が欲しいかなどを聞き込みし、それに合わせた機能を実装している。',
     url: 'https://github.com/iso1216/mine-sweeper',
     url2: 'https://iso1216.github.io/mine-sweeper/',
     img: 'https://github.com/iso1216/portfolio/blob/main/public/img/mine-sweeper.png',
