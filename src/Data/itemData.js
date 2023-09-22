@@ -1,26 +1,26 @@
 export const itemData = [
   {
-    img: '/img/pokemon.jpg',
+    img: '%PUBLIC_URL%/img/pokemon.jpg',
     title: 'pokemonSleep',
   },
   {
-    img: '/img/sutaba.jpg',
+    img: '%PUBLIC_URL%/img/sutaba.jpg',
     title: 'sutaba',
   },
   {
-    img: '/img/noodle.jpg',
+    img: '%PUBLIC_URL%/img/noodle.jpg',
     title: 'kanayamaya',
   },
   {
-    img: '/img/karaoke.jpg',
+    img: '%PUBLIC_URL%/img/karaoke.jpg',
     title: 'karaoke',
   },
   {
-    img: '/img/huro.jpg',
+    img: '%PUBLIC_URL%/img/huro.jpg',
     title: 'huro',
   },
   {
-    img: '/img/riza.jpg',
+    img: '%PUBLIC_URL%/img/riza.jpg',
     title: 'riza-don',
   },
 ];
