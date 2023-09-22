@@ -15,8 +15,8 @@ export default function Products(){
                 <Box sx={{ width: '80%' }}>
                   <Typography variant="h6" paddingBottom={1}>{product.explanation}</Typography>
                   <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>{product.detail}</Typography>
-                  github：<Link href={product.url} target="_blank" underline="none" sx={{ "@media screen and (max-width:400px)": { fontSize: 12 } }}>{product.url}</Link><br />
-                  {product.url2 ? <>アプリ：<Link href={product.url2} target="_blank" underline="none" sx={{ "@media screen and (max-width:400px)": { fontSize: 12 } }}>{product.url2}</Link><br /></> : ''}
+                  github：<Link href={product.url} target="_blank" underline="none" sx={{ "@media screen and (max-width:400px)": { fontSize: 12 }, wordBreak: 'break-all' }}>{product.url}</Link><br />
+                  {product.url2 ? <>アプリ：<Link href={product.url2} target="_blank" underline="none" sx={{ "@media screen and (max-width:400px)": { fontSize: 12 }, wordBreak: 'break-all' }}>{product.url2}</Link><br /></> : ''}
                   {product.img ? <img src={product.img} alt={product.name} className="productImage" /> : ''}
                 </Box>
               </Box></>
@@ -24,8 +24,8 @@ export default function Products(){
                 <Box sx={{ width: '80%' }}>
                   <Typography variant="body1" paddingBottom={1}>{product.explanation}</Typography>
                   <Typography variant="body2" sx={{ whiteSpace: 'pre-line' }}>{product.detail}</Typography>
-                  github：<Link href={product.url} target="_blank" underline="none" sx={{ "@media screen and (max-width:400px)": { fontSize: 12 } }}>{product.url}</Link><br />
-                  {product.url2 ? <>アプリ：<Link href={product.url2} target="_blank" underline="none" sx={{ "@media screen and (max-width:400px)": { fontSize: 12 } }}>{product.url2}</Link><br /></> : ''}
+                  github：<Link href={product.url} target="_blank" underline="none" sx={{ "@media screen and (max-width:400px)": { fontSize: 12 }, wordBreak: 'break-all' }}>{product.url}</Link><br />
+                  {product.url2 ? <>アプリ：<Link href={product.url2} target="_blank" underline="none" sx={{ "@media screen and (max-width:400px)": { fontSize: 12 }, wordBreak: 'break-all' }}>{product.url2}</Link><br /></> : ''}
                   {product.img ? <img src={product.img} alt={product.name} className="productImage" /> : ''}
                 </Box>
               </Box></>

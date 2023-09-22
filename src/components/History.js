@@ -15,7 +15,7 @@ export default function History() {
                 <Typography fontSize={{"xs": '', "sm": 20}}>{history.name}</Typography>
               </Box>
               {history.detail ? <Typography fontSize={{"xs": 10, "sm": 15}} marginLeft={5}>*{history.detail}</Typography> : ''}
-              {history.url ? <Typography component={'a'} fontSize={{"xs": 10, "sm": 12}} marginLeft={5} href={history.url} target='_blank'>{history.url}</Typography> : ''}
+              {history.url ? <Typography component={'a'} fontSize={{"xs": 10, "sm": 12}} marginLeft={5} href={history.url} target='_blank' sx={{color: 'gray', wordBreak: 'break-all'}}>{history.url}</Typography> : ''}
             </Box>
           ))}
         </Box>
