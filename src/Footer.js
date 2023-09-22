@@ -17,8 +17,8 @@ export default function Footer({setValue}) {
     <AppBar component="footer" position="static" color="inherit">
     <Box>
       <Grid container marginY={2}>
-        <Grid xs={12} md={4} textAlign='center' paddingTop={1}>
-          <Typography component='a' href={'/'} color={"inherit"} sx={{textDecoration: 'none'}}>© 2023 Taishi Isomura</Typography>
+        <Grid xs={12} md={4} textAlign='center' paddingTop={1} sx={{display: {xs: "none", md: "block"}}}>
+          <Typography fontSize={12} component='a' href={'/'} color={"inherit"} sx={{textDecoration: 'none'}}>© 2023 Taishi Isomura</Typography>
         </Grid>
         <Grid container xs={12} md={8}>
           <Grid xs={3}>
@@ -51,11 +51,15 @@ export default function Footer({setValue}) {
         <Grid
           xs={12}
           container
-          justifyContent="right"
+          justifyContent={{xs: "space-between", md: "right"}}
           alignItems="center"
-          flexDirection={{ xs: 'column', md: 'row' }}
-          sx={{ fontSize: '12px', marginRight: {"md": 2}}}
+          flexDirection={{ xs: 'column', sm: 'row' }}
+          sx={{ fontSize: '12px', marginRight: {"md": 2},}}
+          marginX={2}
         >
+          <Grid sx={{order: { xs: 2, sm: 1 }, display: {xs: "block", md: "none"}}}>
+            <Typography fontSize={12} component='a' href={'/'} color={"inherit"} sx={{textDecoration: 'none'}}>© 2023 Taishi Isomura</Typography>
+          </Grid>
           <Grid container columnSpacing={1} sx={{ order: { xs: 1, sm: 2 } }}>
           <Grid>
             <IconButton href='https://twitter.com/isotis_1216' target='_blank'>
