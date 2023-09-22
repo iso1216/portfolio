@@ -2,6 +2,7 @@ export const HistData = [
   {
     Date: '2018年04月',
     name: '国立名古屋大学教育学部附属高等学校入学',
+    url: 'https://highschl.educa.nagoya-u.ac.jp/',
   },
   {
     Date: '2021年03月',
@@ -10,6 +11,7 @@ export const HistData = [
   {
     Date: '2021年04月',
     name: '名古屋工学院専門学校入学',
+    url: 'https://www.denpa.ac.jp/'
   },
   {
     Date: '2021年04月',
@@ -27,6 +29,7 @@ export const HistData = [
   {
     Date: '2022年03月',
     name: '学内プログラミングコンテスト準優勝',
+    url: 'https://www.denpa.ac.jp/news/all_topics/course_news/2022/post_243.html',
   },
   {
     Date: '2022年12月',
@@ -35,6 +38,7 @@ export const HistData = [
   {
     Date: '2023年03月',
     name: '学内プログラミングコンテスト優勝',
+    url: 'https://www.denpa.ac.jp/news/all_topics/course_news/2023/6.html',
   },
   {
     Date: '2023年03月',
