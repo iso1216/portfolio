@@ -17,7 +17,7 @@ export default function Footer({setValue}) {
     <AppBar component="footer" position="static" color="inherit">
     <Box>
       <Grid container marginY={2}>
-        <Grid xs={12} md={4} textAlign='center'>
+        <Grid xs={12} md={4} textAlign='center' paddingTop={1}>
           <Typography component='a' href={'/'} color={"inherit"} sx={{textDecoration: 'none'}}>© 2023 Taishi Isomura</Typography>
         </Grid>
         <Grid container xs={12} md={8}>
