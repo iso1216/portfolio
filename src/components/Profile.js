@@ -76,7 +76,7 @@ export default function Profile(){
       <Box sx={{display: 'flex', justifyContent: 'center'}}>
       <ImageList sx={{display: 'flex', marginTop: 5, width: '85%'}} >
       {itemData.map((item) => (
-        <ImageListItem key={item.img} sx={{width: 100/itemData.length+'%', padding: 1}}>
+        <ImageListItem key={item.img} sx={{width: 100/itemData.length+'%', padding: {"sx": '', "sm": 1}}}>
           <img
             src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
             srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}

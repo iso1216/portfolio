@@ -5,7 +5,7 @@ export default function Home() {
   const matches = useMediaQuery('(min-width:700px)');
 
   return (
-    <Container maxWidth='md' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90vh' }}>
+    <Container maxWidth='md' sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70vh' }}>
       {matches ? (
         <Typography variant="h2" sx={{ marginBottom: 2, textAlign: 'center' }}>
           Welcome to My Portfolio
