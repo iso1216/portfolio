@@ -1,8 +1,8 @@
 export const productsData = [
   {
     name: '席替えアプリ',
-    explanation: '8×7のマスでできた席替えアプリ',
-    detail: 'Reactを使用して作成\nクラスで行われる席替えを分かりやすいUIでシステム化しようと思い作成。',
+    explanation: '最大10×15マスの席替えアプリ',
+    detail: 'Reactを使用して作成\nクラスで行われる席替えを分かりやすいUIでシステム化しようと思い作成。\n縦1~15・横1~10の最大150人まで対応。',
     url: 'https://github.com/iso1216/seat-allocation-app',
     url2: 'https://iso1216.github.io/seat-allocation-app/',
     img: 'https://github.com/iso1216/portfolio/blob/main/public/img/seat.png?raw=true',

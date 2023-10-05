@@ -1,6 +1,6 @@
 # PORTFOLIO
 
-Ver 1.0.2 (2023/10月時点)
+Ver 1.1 (2023/10月時点)
 
 - 作成したサイト：https://iso1216.github.io/portfolio/
 
