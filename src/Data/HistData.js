@@ -5,13 +5,25 @@ export const HistData = [
     url: 'https://highschl.educa.nagoya-u.ac.jp/',
   },
   {
+    Date: '2018年08月',
+    name: '学びの杜・学術コース 人間発達科学探究講座 受講',
+    url: 'http://chet.educa.nagoya-u.ac.jp/wp-content/uploads/photo/f99e70c9248da84b274e8c0b9cf5694e.pdf',
+    detail: '名古屋大学の教員を中心とする研究者たちが、各学問領域における物の見方・考え方等を解説します。',
+  },
+  {
+    Date: '2018年08月',
+    name: '中津川プロジェクト参加',
+    url: 'https://chet.educa.nagoya-u.ac.jp/?page_id=86',
+    detail: '高大連携で2泊3日で大学の授業などを体験。',
+  },
+  {
     Date: '2021年03月',
     name: '国立名古屋大学教育学部附属高等学校卒業',
   },
   {
     Date: '2021年04月',
     name: '名古屋工学院専門学校入学',
-    url: 'https://www.denpa.ac.jp/'
+    url: 'https://www.denpa.ac.jp/',
   },
   {
     Date: '2021年04月',
