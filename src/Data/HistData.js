@@ -8,7 +8,7 @@ export const HistData = [
     Date: '2018年08月',
     name: '学びの杜・学術コース 人間発達科学探究講座 受講',
     url: 'http://chet.educa.nagoya-u.ac.jp/wp-content/uploads/photo/f99e70c9248da84b274e8c0b9cf5694e.pdf',
-    detail: '名古屋大学の教員を中心とする研究者たちが、各学問領域における物の見方・考え方等を解説します。',
+    detail: '名古屋大学の教員を中心とする研究者たちが、各学問領域における物の見方・考え方等を解説。',
   },
   {
     Date: '2018年08月',
@@ -64,11 +64,16 @@ export const HistData = [
   {
     Date: '2023年08月',
     name: '株式会社Relicサマーインターン参加',
-    detail: '8/21~8/25の五日間実施',
+    detail: '8/21~8/25の五日間実施。\n新規事業開発の流れを体験。',
   },
   {
     Date: '2023年09月',
     name: '株式会社ジーニー1Dayインターン参加',
-    detail: '9/9実施',
+    detail: '9/9実施。\nRelic×MUIの体験。',
+  },
+  {
+    Date: '2023年12月',
+    name: '株式会社テスク1Dayインターン参加',
+    detail: '12/13実施。\nデータ分析の体験。',
   },
 ];
