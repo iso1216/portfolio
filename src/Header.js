@@ -83,7 +83,7 @@ function Header({setValue}) {
               <IconButton href='https://twitter.com/isotis_1216' target='_blank'>
                 <TwitterIcon /><label><small>Twitter</small></label>
               </IconButton><br/>
-              <IconButton href='https://www.instagram.com/taishi_isolation/' target='_blank'>
+              <IconButton href='https://www.instagram.com/taishi_isososososo/' target='_blank'>
                 <InstagramIcon /><label><small>Instagram</small></label>
               </IconButton><br/>
               <IconButton href='https://github.com/iso1216' target='_blank'>
@@ -124,7 +124,7 @@ function Header({setValue}) {
           <IconButton href='https://twitter.com/isotis_1216' target='_blank'>
             <TwitterIcon />
           </IconButton>
-          <IconButton href='https://www.instagram.com/taishi_isolation/' target='_blank'>
+          <IconButton href='https://www.instagram.com/taishi_isososososo/' target='_blank'>
             <InstagramIcon />
           </IconButton>
           <IconButton href='https://github.com/iso1216' target='_blank'>

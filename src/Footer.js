@@ -67,7 +67,7 @@ export default function Footer({setValue}) {
             </IconButton><br/>
           </Grid>
           <Grid>
-            <IconButton href='https://www.instagram.com/taishi_isolation/' target='_blank'>
+            <IconButton href='https://www.instagram.com/taishi_isososososo/' target='_blank'>
               <InstagramIcon />
             </IconButton><br/>
           </Grid>
