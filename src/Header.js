@@ -6,10 +6,12 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import { IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link as RouterLink } from 'react-router-dom';
 
 const pages = ['PROFILE', 'PRODUCTS', 'HISTORY'];
+const pageLinks = ['/profile', '/products', '/history'];
 
-function Header({setValue}) {
+function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -17,11 +19,6 @@ function Header({setValue}) {
   };
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleClick = (i) => {
-    setAnchorElNav(null);
-    setValue(i+1);
   };
 
   return (
@@ -32,8 +29,8 @@ function Header({setValue}) {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/portfolio"
+            component={RouterLink}
+            to={"/portfolio"}
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -76,8 +73,14 @@ function Header({setValue}) {
               }}
             >
               {pages.map((page, i) => (
-                <MenuItem key={page} onClick={ () => handleClick(i) }>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page} >
+                  <Typography
+                  textAlign="center"
+                  component={RouterLink}
+                  to={pageLinks[i]}
+                  sx={{ color: 'black', display: 'block' }}
+                    >{page}
+                  </Typography>
                 </MenuItem>
               ))}
               <IconButton href='https://twitter.com/isotis_1216' target='_blank'>
@@ -94,8 +97,8 @@ function Header({setValue}) {
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href="/portfolio"
+            component={RouterLink}
+            to={"/portfolio"}
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -113,7 +116,8 @@ function Header({setValue}) {
             {pages.map((page, i) => (
               <Button
                 key={page}
-                onClick={ () => handleClick(i) }
+                component={RouterLink}
+                to={pageLinks[i]}
                 sx={{ my: 2, color: 'black', display: 'block' }}
               >
                 {page}

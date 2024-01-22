@@ -4,29 +4,28 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { productsData } from "./Data/productsData";
+import { Link as RouterLink } from 'react-router-dom';
 
-export default function Footer({setValue}) {
-  const handleClick = (i) => {
-    setValue(i);
+export default function Footer() {
+    const handleClick = () => {
     window.scrollTo({
       top: 0,
     });
   };
-
   return (
     <AppBar component="footer" position="static" color="inherit">
     <Box>
       <Grid container marginY={2}>
         <Grid xs={12} md={4} textAlign='center' paddingTop={1} sx={{display: {xs: "none", md: "block"}}}>
-          <Typography fontSize={12} component='a' href={'/portfolio'} color={"inherit"} sx={{textDecoration: 'none'}}>© 2023 Taishi Isomura</Typography>
+          <Typography fontSize={12} component={RouterLink} to={'/portfolio'} color={"inherit"} sx={{textDecoration: 'none'}}>© 2023 Taishi Isomura</Typography>
         </Grid>
         <Grid container xs={12} md={8}>
           <Grid xs={3}>
             <Box sx={{display: 'flex', justifyContent: 'center', "@media screen and (max-width:490px)": {fontSize: 12}}}>
               <Box component="ul" aria-labelledby="category-a" sx={{ pl: 2 }}>
-                <li><Link underline="none" color="inherit" onClick={() => {handleClick(1)}}>Profile</Link></li>
-                <li><Link underline="none" color="inherit" onClick={() => {handleClick(2)}}>Products</Link></li>
-                <li><Link underline="none" color="inherit" onClick={() => {handleClick(3)}}>History</Link></li>
+                <li><Link component={RouterLink} to={"/profile"} underline="none" color="inherit" onClick={() => {handleClick()}}>Profile</Link></li>
+                <li><Link component={RouterLink} to={"/products"} underline="none" color="inherit" onClick={() => {handleClick()}}>Products</Link></li>
+                <li><Link component={RouterLink} to={"/history"} underline="none" color="inherit" onClick={() => {handleClick()}}>History</Link></li>
               </Box>
             </Box>
           </Grid>
@@ -34,7 +33,7 @@ export default function Footer({setValue}) {
             <Box sx={{display: 'flex', justifyContent: 'center', "@media screen and (max-width:490px)": {fontSize: 12}}}>
               <Box component="ul" aria-labelledby="category-b" sx={{ pl: 2 }}>
                 {productsData.map((product, index) =>(
-                  <li key={index}><Link underline="none" color="inherit" href={product.url} target="_blank">{product.name}</Link></li>
+                  <li key={index}><Link component={RouterLink} to={product.url} underline="none" color="inherit" target="_blank">{product.name}</Link></li>
                 ))}
               </Box>
             </Box>
@@ -58,21 +57,21 @@ export default function Footer({setValue}) {
           marginX={2}
         >
           <Grid sx={{order: { xs: 2, sm: 1 }, display: {xs: "block", md: "none"}}}>
-            <Typography fontSize={12} component='a' href={'/portfolio'} color={"inherit"} sx={{textDecoration: 'none'}}>© 2023 Taishi Isomura</Typography>
+            <Typography fontSize={12} component={RouterLink} to={'/portfolio'} color={"inherit"} sx={{textDecoration: 'none'}}>© 2023 Taishi Isomura</Typography>
           </Grid>
           <Grid container columnSpacing={1} sx={{ order: { xs: 1, sm: 2 } }}>
           <Grid>
-            <IconButton href='https://twitter.com/isotis_1216' target='_blank'>
+            <IconButton component="a" href='https://twitter.com/isotis_1216' target='_blank'>
               <TwitterIcon />
             </IconButton><br/>
           </Grid>
           <Grid>
-            <IconButton href='https://www.instagram.com/taishi_isososososo/' target='_blank'>
+            <IconButton component="a" href='https://www.instagram.com/taishi_isososososo/' target='_blank'>
               <InstagramIcon />
             </IconButton><br/>
           </Grid>
           <Grid>
-            <IconButton href='https://github.com/iso1216' target='_blank'>
+            <IconButton component="a" href='https://github.com/iso1216' target='_blank'>
               <GitHubIcon />
             </IconButton>
           </Grid>
