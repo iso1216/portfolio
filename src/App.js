@@ -4,15 +4,17 @@ import Footer from './Footer';
 import Header from './Header';
 import Main from './Main';
 import { Box } from '@mui/material';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
-  const [value, setValue] = React.useState(0);
   return (
-    <Box>
-      <Header setValue={setValue} />
-      <Main value={value} />
-      <Footer setValue={setValue} />
-    </Box>
+    <Router>
+      <Box>
+        <Header />
+        <Main />
+        <Footer />
+      </Box>
+    </Router>
   );
 }
 
