@@ -20,6 +20,10 @@ export const itemData = [
     title: 'huro',
   },
   {
+    img: 'https://github.com/iso1216/portfolio/blob/main/public/img/chunithm.jpg?raw=true',
+    title: 'chunithm',
+  },
+  {
     img: 'https://github.com/iso1216/portfolio/blob/main/public/img/riza.jpg?raw=true',
     title: 'riza-don',
   },

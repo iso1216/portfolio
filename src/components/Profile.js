@@ -40,9 +40,9 @@ export default function Profile(){
       <Box sx={{"@media screen and (min-width:700px)": {display: 'flex'}}}>
         <Box sx={{"@media screen and (min-width:700px)": {width: '45%'}, "@media screen and (max-width:400px)": {width: '72px', display: 'flex'}, "@media screen and (max-width:699px) and (min-width:401px)": {width: '200px', display: 'flex'}}}>
           <Box sx={{display: 'flex' , justifyContent: 'center'}} className="image-rotate">
-            <img src="https://github.com/iso1216/portfolio/blob/main/public/img/myImage.jpg?raw=true" alt="自画像(コナミコマンド対応)" className="myImage" />
+            <img src="https://github.com/iso1216/portfolio/blob/main/public/img/myImage.jpg?raw=true" alt="江の島での自画像(コナミコマンド対応)" className="myImage" />
           </Box>
-          {useMediaQuery("(min-width:700px)") ? <label><small>※志摩スペイン村での写真</small></label>:""}
+          {useMediaQuery("(min-width:700px)") ? <label><small>※江の島での写真</small></label>:""}
         </Box>
         <Box fontFamily={"initial"} sx={{"@media screen and (min-width:700px)": {width: '55%'}}}>
           <Box sx={{display: 'flex', alignItems: "end", "@media screen and (min-width:700px)": {justifyContent: 'center'}}}>

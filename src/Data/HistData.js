@@ -76,4 +76,8 @@ export const HistData = [
     name: '株式会社テスク1Dayインターン参加',
     detail: '12/13実施。\nデータ分析の体験。',
   },
+  {
+    Date: '2024年3月',
+    name: '日本化粧品検定3級合格',
+  },
 ];
