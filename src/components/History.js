@@ -6,10 +6,30 @@ export default function History() {
   return (
     <Container maxWidth='lg'>
       <h1>経歴</h1>
-      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', pb:2 }}>
         <Box>
           {HistData.map((history, index) => (
-            <Box key={index} sx={{"@media screen and (min-width:700px)": {my: 3}}}>
+            <Box key={index} sx={{
+              "@media screen and (min-width:700px)": {
+                pb: 2,
+                mb: 0.3,
+                mt: 0,
+                pt: 0,
+                borderLeft: '2px solid gray', 
+                pl: 2,
+                position: 'relative',
+                '::before': {
+                  content: '""',
+                  position: 'absolute',
+                  left: -6,
+                  top: 0,
+                  width: 10,
+                  height: 10,
+                  borderRadius: '50%',
+                  backgroundColor: 'gray',
+                }
+              }
+            }}>
               <Box sx={{"@media screen and (min-width:700px)": {display: 'flex'}}}>
                 <Typography sx={{"@media screen and (min-width:400px)": { fontSize: 20 }}} marginRight={2}>{history.Date}</Typography>
                 <Typography fontSize={{"xs": '', "sm": 20}}>{history.name}</Typography>
