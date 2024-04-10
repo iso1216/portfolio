@@ -1,13 +1,11 @@
 import { AppBar, Box, IconButton, Link, Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import { productsData } from "./Data/productsData";
 import { Link as RouterLink } from 'react-router-dom';
+import { AccountData } from "./Data/account";
 
 export default function Footer() {
-    const handleClick = () => {
+  const handleClick = () => {
     window.scrollTo({
       top: 0,
     });
@@ -60,21 +58,13 @@ export default function Footer() {
             <Typography fontSize={12} component={RouterLink} to={'/portfolio'} color={"inherit"} sx={{textDecoration: 'none'}}>© 2023 Taishi Isomura</Typography>
           </Grid>
           <Grid container columnSpacing={1} sx={{ order: { xs: 1, sm: 2 } }}>
-          <Grid>
-            <IconButton component="a" href='https://twitter.com/isotis_1216' target='_blank'>
-              <TwitterIcon />
-            </IconButton><br/>
-          </Grid>
-          <Grid>
-            <IconButton component="a" href='https://www.instagram.com/taishi_isososososo/' target='_blank'>
-              <InstagramIcon />
-            </IconButton><br/>
-          </Grid>
-          <Grid>
-            <IconButton component="a" href='https://github.com/iso1216' target='_blank'>
-              <GitHubIcon />
-            </IconButton>
-          </Grid>
+          {AccountData.map((account, index) => (
+            <Grid key={index}>
+              <IconButton href={account.href} target='_blank'>
+                {account.Icon}
+              </IconButton>
+            </Grid>
+          ))}
           </Grid>
         </Grid>
       </Grid>
