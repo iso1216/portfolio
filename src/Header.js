@@ -1,12 +1,10 @@
 import * as React from 'react';
 import { AppBar, Box, Toolbar, Container, Button, Menu, MenuItem, Typography } from '@mui/material';
 import CatchingPokemonRoundedIcon from '@mui/icons-material/CatchingPokemonRounded';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import { IconButton } from '@mui/material';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link as RouterLink } from 'react-router-dom';
+import { AccountData } from './Data/account';
 
 const pages = ['PROFILE', 'PRODUCTS', 'HISTORY'];
 const pageLinks = ['/profile', '/products', '/history'];
@@ -83,15 +81,13 @@ function Header() {
                   </Typography>
                 </MenuItem>
               ))}
-              <IconButton href='https://twitter.com/isotis_1216' target='_blank'>
-                <TwitterIcon /><label><small>Twitter</small></label>
-              </IconButton><br/>
-              <IconButton href='https://www.instagram.com/taishi_isososososo/' target='_blank'>
-                <InstagramIcon /><label><small>Instagram</small></label>
-              </IconButton><br/>
-              <IconButton href='https://github.com/iso1216' target='_blank'>
-                <GitHubIcon /><label><small>GitHub</small></label>
-              </IconButton>
+              {AccountData.map((account, index) => (
+                <Box key={index}>
+                  <IconButton href={account.href} target='_blank'>
+                    {account.Icon}<label><small>{account.detail}</small></label>
+                  </IconButton>
+                </Box>
+              ))}
             </Menu>
           </Box>
           <Typography
@@ -125,15 +121,11 @@ function Header() {
             ))}
           </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-          <IconButton href='https://twitter.com/isotis_1216' target='_blank'>
-            <TwitterIcon />
-          </IconButton>
-          <IconButton href='https://www.instagram.com/taishi_isososososo/' target='_blank'>
-            <InstagramIcon />
-          </IconButton>
-          <IconButton href='https://github.com/iso1216' target='_blank'>
-            <GitHubIcon />
-          </IconButton>
+            {AccountData.map((account, index) => (
+              <IconButton href={account.href} target='_blank' key={index}>
+                {account.Icon}
+              </IconButton>
+            ))}
           </Box>
         </Toolbar>
       </Container>
