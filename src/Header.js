@@ -1,15 +1,16 @@
 import * as React from 'react';
-import { AppBar, Box, Toolbar, Container, Button, Menu, MenuItem, Typography } from '@mui/material';
-import CatchingPokemonRoundedIcon from '@mui/icons-material/CatchingPokemonRounded';
-import { IconButton } from '@mui/material';
+import { AppBar, Box, Toolbar, Container, IconButton, Typography, Button, Menu, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link as RouterLink } from 'react-router-dom';
 import { AccountData } from './Data/account';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 const pages = ['PROFILE', 'PRODUCTS', 'HISTORY'];
 const pageLinks = ['/profile', '/products', '/history'];
 
-function Header() {
+function Header({ darkMode, setDarkMode }) {
+  // ハンバーガーメニュー用
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -23,7 +24,6 @@ function Header() {
     <AppBar position="static" color='inherit'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <CatchingPokemonRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -36,8 +36,7 @@ function Header() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
-            }}
-          >
+            }}>
             PORTFOLIO
           </Typography>
 
@@ -76,7 +75,7 @@ function Header() {
                   textAlign="center"
                   component={RouterLink}
                   to={pageLinks[i]}
-                  sx={{ color: 'black', display: 'block' }}
+                  sx={{ color: darkMode ? 'white' : 'black', display: 'block' }}
                     >{page}
                   </Typography>
                 </MenuItem>
@@ -114,7 +113,7 @@ function Header() {
                 key={page}
                 component={RouterLink}
                 to={pageLinks[i]}
-                sx={{ my: 2, color: 'black', display: 'block' }}
+                sx={{ my: 2, color: darkMode ? 'white' : 'black', display: 'block' }}
               >
                 {page}
               </Button>
@@ -127,9 +126,17 @@ function Header() {
               </IconButton>
             ))}
           </Box>
+          <IconButton
+            sx={{ ml: 'auto' }}
+            onClick={() => setDarkMode(!darkMode)}
+            color="inherit"
+          >
+            {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
+
 export default Header;
