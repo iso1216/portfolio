@@ -23,7 +23,7 @@ function App() {
       <Router>
         <Box>
           <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-          <Main />
+          <Main darkMode={darkMode} />
           <Footer />
         </Box>
       </Router>

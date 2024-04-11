@@ -77,7 +77,7 @@ export const HistData = [
     detail: '12/13実施。\nデータ分析の体験。',
   },
   {
-    Date: '2024年3月',
+    Date: '2024年03月',
     name: '日本化粧品検定3級合格',
   },
 ];
