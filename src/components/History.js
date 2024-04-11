@@ -31,7 +31,7 @@ export default function History({ darkMode }) {
                 '::after': {
                   content: '""',
                   position: 'absolute',
-                  left: -1, // ボーダーの太さに応じて調整
+                  left: -0.5, // ボーダーの太さに応じて調整
                   top: 25, // ボーダーの開始位置を10px下げる
                   height: 'calc(100% - 20px)', // ボーダーの高さを調整して全体の高さから10pxを引く
                   borderLeft: '2px solid',
