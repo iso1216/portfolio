@@ -14,7 +14,13 @@ function App() {
   const theme = createTheme({
     palette: {
       mode: darkMode ? 'dark' : 'light',
+      
     },
+    typography: {
+      fontFamily: [
+        'M PLUS 1 Code',
+      ].join(','),
+    }
   });
 
   return (

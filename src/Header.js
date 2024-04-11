@@ -99,7 +99,6 @@ function Header({ darkMode, setDarkMode }) {
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               fontWeight: 700,
-              fontFamily: 'monospace',
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
@@ -113,7 +112,7 @@ function Header({ darkMode, setDarkMode }) {
                 key={page}
                 component={RouterLink}
                 to={pageLinks[i]}
-                sx={{ my: 2, color: darkMode ? 'white' : 'black', display: 'block' }}
+                sx={{ my: 2, color: darkMode ? 'white' : 'black', display: 'block', letterSpacing: 2 }}
               >
                 {page}
               </Button>
