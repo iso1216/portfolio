@@ -15,7 +15,7 @@ export default function Footer() {
     <Box>
       <Grid container marginY={2}>
         <Grid xs={12} md={4} textAlign='center' paddingTop={1} sx={{display: {xs: "none", md: "block"}}}>
-          <Typography fontSize={12} component={RouterLink} to={'/portfolio'} color={"inherit"} sx={{textDecoration: 'none', letterSpacing: 1 }}>© 2023 Taishi Isomura</Typography>
+          <Typography fontSize={12} fontWeight={450} component={RouterLink} to={'/portfolio'} color={"inherit"} sx={{textDecoration: 'none', letterSpacing: 1 }}>© 2023 Taishi Isomura</Typography>
         </Grid>
         <Grid container xs={12} md={8}>
           <Grid xs={3}>
@@ -55,7 +55,7 @@ export default function Footer() {
           marginX={2}
         >
           <Grid sx={{order: { xs: 2, sm: 1 }, display: {xs: "block", md: "none"}}}>
-            <Typography fontSize={12} component={RouterLink} to={'/portfolio'} color={"inherit"} sx={{textDecoration: 'none', letterSpacing: 1}}>© 2023 Taishi Isomura</Typography>
+            <Typography fontSize={12} fontWeight={400} component={RouterLink} to={'/portfolio'} color={"inherit"} sx={{textDecoration: 'none', letterSpacing: 1}}>© 2023 Taishi Isomura</Typography>
           </Grid>
           <Grid container columnSpacing={1} sx={{ order: { xs: 1, sm: 2 } }}>
           {AccountData.map((account, index) => (

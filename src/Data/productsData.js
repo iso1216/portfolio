@@ -2,7 +2,7 @@ export const productsData = [
   {
     name: '席替えアプリ',
     explanation: '最大10×15マスの席替えアプリ',
-    detail: 'Reactを使用して作成\nクラスで行われる席替えを分かりやすいUIでシステム化しようと思い作成。\n縦1~15・横1~10の最大150人まで対応。',
+    detail: 'Reactを使用して作成\nクラスで行われる席替えを分かりやすいUIでシステム化しようと思い作成。\n縦1~15×横1~10の最大150人まで対応。',
     url: 'https://github.com/iso1216/seat-allocation-app',
     url2: 'https://iso1216.github.io/seat-allocation-app/',
     img: 'https://github.com/iso1216/portfolio/blob/main/public/img/seat.png?raw=true',
@@ -27,5 +27,12 @@ export const productsData = [
     detail: 'Laravelを使用して作成\n学園際の会計管理を今まで紙で行っていたので、システム化することで会計が楽になりミスを減らすことにつながると思い作成。',
     url: 'https://github.com/iso1216/cash-coordinater',
     img: 'https://github.com/iso1216/portfolio/blob/main/public/img/cash.png?raw=true',
+  },
+  {
+    name: 'オセロ',
+    explanation: '対人やCPU対戦のできるオセロのアプリ',
+    detail: 'Reactを使用して作成\nReact+MUIについての復習を目的として作成。',
+    url: 'https://github.com/iso1216/reversi-master',
+    img: 'https://github.com/iso1216/portfolio/blob/main/public/img/reversi.png?raw=true',
   },
 ]

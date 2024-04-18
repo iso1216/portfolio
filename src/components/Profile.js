@@ -52,12 +52,12 @@ export default function Profile(){
           <h3>生年月日&emsp;&emsp;：平成14年(2002年)12月16日</h3>
           <h3>住所&emsp;&emsp;&emsp;&emsp;：愛知県瀬戸市</h3>
           <h3>血液型&emsp;&emsp;&emsp;：A型</h3>
-          <h3>趣味・日課&emsp;：パワプロ、ポケモンスリープ</h3>
+          <h3>趣味・日課&emsp;：音ゲー、ポケモンスリープ</h3>
           <h3>Mail&emsp;&emsp;&emsp;&emsp;：taishi2002i@gmail.com</h3>
         </Box>
       </Box>
       <Container sx={{"@media screen and (min-width:700px)": {width: '85%'}}}>
-        <Typography fontSize={{"xs": 12,"sm": 15}} marginY={2}>&emsp;専門学校に通いプログラミングやマネジメント、資格取得に向けた勉強を行いながら、空いた時間を使ってReactやLaravelを利用し簡単な個人開発を行っています。ゲームが好きでパワプロやポケモンをよくプレイします。また、最近ポケモンスリープにはまっており、夜更かしをすることが減りました。</Typography>
+        <Typography fontSize={{"xs": 12,"sm": 15}} marginY={2}>&emsp;専門学校に通いプログラミングやマネジメント、資格取得に向けた勉強を行いながら、空いた時間を使ってReactやLaravelを利用し簡単な個人開発を行っています。ゲームが好きで音ゲーに加えパワプロ・ポケモン・モンハン・マイクラなどのゲームをよくプレイします。特に日課としてポケモンスリープにはまってます。</Typography>
       </Container>
       <Typography variant="h5" sx={{display: {"xs": "none", "sm": "flex"}}} marginLeft={2}>プログラミングスキル</Typography>
       <Typography variant="h6" sx={{display: {"xs": "flex", "sm": "none"}}}>プログラミングスキル</Typography>

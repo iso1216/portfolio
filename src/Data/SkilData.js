@@ -13,7 +13,7 @@ export const SkilData = [
   },
   {
     skil: 'Python',
-    since: '約２年',
+    since: '約３年',
   },
   {
     skil: 'PHP',
@@ -21,7 +21,7 @@ export const SkilData = [
   },
   {
     skil: 'JavaScript',
-    since: '約２年',
+    since: '約３年',
   },
   {
     skil: 'HTML/CSS',
@@ -29,7 +29,7 @@ export const SkilData = [
   },
   {
     skil: 'React',
-    since: '約１年',
+    since: '約２年',
   },
   {
     skil: 'Laravel',
@@ -41,7 +41,7 @@ export const SkilData = [
   },
   {
     skil: 'MUI',
-    since: '約半年',
+    since: '約１年',
   },
   {
     skil: 'SQL',
