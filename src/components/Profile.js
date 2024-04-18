@@ -31,6 +31,7 @@ export default function Profile(){
         setRotateImage(!rotateImage);
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [keyHistoryList]);
   
 
