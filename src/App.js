@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Header from './Header';
 import Main from './Main';
 import { Box } from '@mui/material';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
