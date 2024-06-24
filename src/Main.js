@@ -8,7 +8,7 @@ function Main({ darkMode }) {
   return (
     <main>
       <Routes>
-        <Route path={"/"} element={<Home />} />
+        <Route path={"/portfolio"} element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/products" element={<Products />} />
         <Route path="/history" element={<History  darkMode={darkMode} />} />
