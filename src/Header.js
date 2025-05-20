@@ -28,7 +28,7 @@ function Header({ darkMode, setDarkMode }) {
             variant="h6"
             noWrap
             component={RouterLink}
-            to={"/portfolio"}
+            to={"/"}
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
