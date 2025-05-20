@@ -5,23 +5,31 @@
     <title>Page Not Found - Redirecting...</title>
     <script type="text/javascript">
       // リポジトリ名 (例: /portfolio)
-      const publicUrlSegment = '/' + location.pathname.split('/')[1];
+      // location.pathname は /portfolio/some/path や /portfolio/ のようになる
+      const segments = location.pathname.split('/');
+      const publicUrlSegment = '/' + segments[1]; // 確実に /portfolio を取得
 
-      // アクセスしようとしたパス (例: /portfolio/profile)
+      // アクセスしようとしたパス全体 (例: /portfolio/profile)
       const originalPath = location.pathname;
 
       // sessionStorageにリダイレクト先の相対パスを保存
-      // (例: /profile や / )
-      let redirectTo = originalPath.startsWith(publicUrlSegment + '/') 
-                       ? originalPath.substring(publicUrlSegment.length) 
-                       : '/';
-      if (redirectTo === '') redirectTo = '/'; // ルートの場合
-
-      sessionStorage.redirect = redirectTo;
+      // originalPath から publicUrlSegment を除去した部分 (例: /profile や / )
+      let relativePath = originalPath.substring(publicUrlSegment.length);
+      if (!relativePath.startsWith('/')) {
+        relativePath = '/' + relativePath;
+      }
+      // もし relativePath が空文字列 (例: /portfolio/ へのアクセス) なら "/" にする
+      if (relativePath === "") {
+        relativePath = "/";
+      }
+      
+      sessionStorage.redirect = relativePath;
 
       // アプリケーションのルート (index.html のある場所) にリダイレクト
       // (例: https://iso1216.github.io/portfolio/)
-      location.href = location.protocol + '//' + location.host + publicUrlSegment + '/';
+      // 末尾のスラッシュを確実に1つにする
+      const appRoot = location.protocol + '//' + location.host + publicUrlSegment;
+      location.href = appRoot.endsWith('/') ? appRoot : appRoot + '/';
     </script>
   </head>
   <body>
