@@ -30,6 +30,23 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script type="text/javascript">
+      (function() {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect; // redirect情報を削除
+        if (redirect) {
+          // %PUBLIC_URL% はビルド時に package.json の homepage のパス部分に置き換えられます
+          // (例: /portfolio)
+          const publicPath = '%PUBLIC_URL%';
+          const targetPath = publicPath + (redirect.startsWith('/') ? redirect : '/' + redirect);
+          
+          // 現在のパスがターゲットパスと異なる場合のみURLを書き換える
+          if (window.location.pathname !== targetPath) {
+            window.history.replaceState(null, null, targetPath);
+          }
+        }
+      })();
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

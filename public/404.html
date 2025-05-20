@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found</title>
-  <script>
-    // GitHub Pages 404.html redirect to index.html
-    const redirectUrl = window.location.protocol + '//' + window.location.host + '/index.html';
-    window.location.replace(redirectUrl);
-  </script>
-</head>
-<body>
-  <p>Redirecting...</p>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Not Found - Redirecting...</title>
+    <script type="text/javascript">
+      // リポジトリ名 (例: /portfolio)
+      const publicUrlSegment = '/' + location.pathname.split('/')[1];
+
+      // アクセスしようとしたパス (例: /portfolio/profile)
+      const originalPath = location.pathname;
+
+      // sessionStorageにリダイレクト先の相対パスを保存
+      // (例: /profile や / )
+      let redirectTo = originalPath.startsWith(publicUrlSegment + '/') 
+                       ? originalPath.substring(publicUrlSegment.length) 
+                       : '/';
+      if (redirectTo === '') redirectTo = '/'; // ルートの場合
+
+      sessionStorage.redirect = redirectTo;
+
+      // アプリケーションのルート (index.html のある場所) にリダイレクト
+      // (例: https://iso1216.github.io/portfolio/)
+      location.href = location.protocol + '//' + location.host + publicUrlSegment + '/';
+    </script>
+  </head>
+  <body>
+    If you are not redirected automatically, please click <a href="/">here</a>.
+  </body>
 </html>

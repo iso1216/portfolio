@@ -23,10 +23,17 @@ function App() {
     }
   });
 
+  // process.env.PUBLIC_URL は create-react-app がビルド時に
+  // package.json の "homepage" フィールドに基づいて設定します。
+  // 例: "homepage": "https://iso1216.github.io/portfolio" の場合、
+  // process.env.PUBLIC_URL は "/portfolio" になります。
+  const basename = process.env.PUBLIC_URL || "";
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
+      {/* basenameプロパティを設定 */}
+      <Router basename={basename}>
         <Box>
           <Header darkMode={darkMode} setDarkMode={setDarkMode} />
           <Main darkMode={darkMode} />
