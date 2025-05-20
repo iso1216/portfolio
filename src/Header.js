@@ -28,7 +28,7 @@ function Header({ darkMode, setDarkMode }) {
             variant="h6"
             noWrap
             component={RouterLink}
-            to={"/"}
+            to={"/"} // デスクトップ表示用のタイトルリンク (これは元々正しかった)
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -93,7 +93,7 @@ function Header({ darkMode, setDarkMode }) {
             variant="h5"
             noWrap
             component={RouterLink}
-            to={"/portfolio"}
+            to={"/"} // モバイル表示用のタイトルリンク (修正箇所)
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
