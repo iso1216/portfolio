@@ -58,7 +58,7 @@ export default function Profile(){
         </Box>
       </Box>
       <Container sx={{"@media screen and (min-width:700px)": {width: '85%'}}}>
-        <Typography fontSize={{"xs": 12,"sm": 15}} marginY={2}>&emsp;専門学校に通いプログラミングやマネジメント、資格取得に向けた勉強を行いながら、空いた時間を使ってReactやLaravelを利用し簡単な個人開発を行っています。ゲームが好きで音ゲーに加えパワプロ・ポケモン・モンハン・マイクラなどのゲームをよくプレイします。特に日課としてポケモンスリープにはまってます。</Typography>
+        <Typography fontSize={{"xs": 12,"sm": 15}} marginY={2}>&emsp;現在はIT企業でエンジニアとして働きながら、業務で使用する技術の習得や自己啓発に励んでいます。空いた時間を使って個人開発を行い、技術力の向上に取り組んでいます。趣味として音ゲーやポケモンスリープを楽しんでおり、特にポケモンスリープは日課として継続的にプレイしています。</Typography>
       </Container>
       <Typography variant="h5" sx={{display: {"xs": "none", "sm": "flex"}}} marginLeft={2}>プログラミングスキル</Typography>
       <Typography variant="h6" sx={{display: {"xs": "flex", "sm": "none"}}}>プログラミングスキル</Typography>

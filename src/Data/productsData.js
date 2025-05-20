@@ -2,7 +2,7 @@ export const productsData = [
   {
     name: '席替えアプリ',
     explanation: '最大10×15マスの席替えアプリ',
-    detail: 'Reactを使用して作成\nクラスで行われる席替えを分かりやすいUIでシステム化しようと思い作成。\n縦1~15×横1~10の最大150人まで対応。',
+    detail: 'React*MUIを使用して作成\nクラスで行われる席替えを分かりやすいUIでシステム化しようと思い作成。\n縦1~15×横1~10の最大150人まで対応。',
     url: 'https://github.com/iso1216/seat-allocation-app',
     url2: 'https://iso1216.github.io/seat-allocation-app/',
     img: 'https://github.com/iso1216/portfolio/blob/main/public/img/seat.png?raw=true',
@@ -10,7 +10,7 @@ export const productsData = [
   {
     name: 'マインスイーパー',
     explanation: '複数難易度でキー入力でもプレイ可能なマインスイーパー',
-    detail: 'Reactを使用して作成\nReactのtutorialのシステムを改編し暇つぶしにちょうどいいゲームを作ってみようと思い作成し、知り合いからどういった機能が欲しいかなどを聞き込みし、それに合わせた機能を実装している。',
+    detail: 'React*MUIを使用して作成\nReactのtutorialのシステムを改編し暇つぶしにちょうどいいゲームを作ってみようと思い作成し、知り合いからどういった機能が欲しいかなどを聞き込みし、それに合わせた機能を実装している。',
     url: 'https://github.com/iso1216/mine-sweeper',
     url2: 'https://iso1216.github.io/mine-sweeper/',
     img: 'https://github.com/iso1216/portfolio/blob/main/public/img/mine-sweeper.png?raw=true',
@@ -31,7 +31,7 @@ export const productsData = [
   {
     name: 'オセロ',
     explanation: '対人やCPU対戦のできるオセロのアプリ',
-    detail: 'Reactを使用して作成\nReact+MUIについての復習を目的として作成。',
+    detail: 'React*MUIを使用して作成\nReact+MUIについての復習を目的として作成。',
     url: 'https://github.com/iso1216/reversi-master',
     img: 'https://github.com/iso1216/portfolio/blob/main/public/img/reversi.png?raw=true',
   },

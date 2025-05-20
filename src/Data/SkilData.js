@@ -1,62 +1,62 @@
 export const SkilData = [
   {
     skil: 'C',
-    since: '約２年',
+    since: '約2年',
   },
   {
     skil: 'C#',
-    since: '約１年',
+    since: '約1年',
   },
   {
     skil: 'Java',
-    since: '約１年',
+    since: '約1年',
   },
   {
     skil: 'Python',
-    since: '約３年',
+    since: '約4年',
   },
   {
     skil: 'PHP',
-    since: '約２年',
+    since: '約2年',
   },
   {
     skil: 'JavaScript',
-    since: '約３年',
+    since: '約4年',
   },
   {
     skil: 'HTML/CSS',
-    since: '約３年',
+    since: '約4年',
   },
   {
     skil: 'React',
-    since: '約２年',
+    since: '約3年',
   },
   {
     skil: 'Laravel',
-    since: '約半年',
+    since: '約1年',
   },
   {
     skil: 'TailwindCSS',
-    since: '約１年',
+    since: '約1年',
   },
   {
     skil: 'MUI',
-    since: '約１年',
+    since: '約2年',
   },
   {
     skil: 'SQL',
-    since: '約３年',
+    since: '約4年',
   },
   {
     skil: 'Linux',
-    since: '約２年',
+    since: '約3年',
   },
   {
     skil: 'Docker',
-    since: '約２年',
+    since: '約3年',
   },
   {
     skil: 'Git/Github',
-    since: '約３年',
+    since: '約4年',
   },
 ]
